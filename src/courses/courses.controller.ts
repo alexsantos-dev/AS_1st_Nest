@@ -3,8 +3,6 @@ import {
   Controller,
   Delete,
   Get,
-  HttpCode,
-  HttpStatus,
   Param,
   Patch,
   Post,
@@ -21,12 +19,11 @@ export class CoursesController {
     return `registro encontrado: ${id}`;
   }
   @Post()
-  @HttpCode(HttpStatus.NO_CONTENT)
-  create(@Body() body) {
+  create(@Body() body: object) {
     return body;
   }
   @Patch(':id')
-  update(@Param('id') id: string, @Body() body) {
+  update(@Param('id') id: string) {
     return `registro atualizado ${id}`;
   }
   @Delete(':id')
