@@ -14,8 +14,8 @@ export class CoursesService {
       id: '2',
       name: 'teste',
       description: 'teste',
-      tags: ['teste1', 'teste0'],
-    },
+      tags: ['teste1', 'teste0']
+    }
   ];
 
   findAll() {
@@ -29,7 +29,7 @@ export class CoursesService {
     } else {
       throw new HttpException(
         `Course ID: ${id} not found`,
-        HttpStatus.NOT_FOUND,
+        HttpStatus.NOT_FOUND
       );
     }
   }
